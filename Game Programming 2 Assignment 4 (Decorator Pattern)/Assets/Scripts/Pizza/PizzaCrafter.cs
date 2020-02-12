@@ -11,14 +11,16 @@ public class PizzaCrafter : MonoBehaviour
     public Text pizzaStats;
     public Text totalPizzasText;
     public Text totalToppingsText;
+    public Text totalCostText;
 
     public int totalToppingsNum;
     public int totalPizzasNum;
+    public float totalCostNum;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        pizzaStats.text = "Pick one type of pizza per order and add no more than 4 toppings.";
     }
 
     // Update is called once per frame
@@ -26,6 +28,7 @@ public class PizzaCrafter : MonoBehaviour
     {
         totalToppingsText.text = "Toppings: " + totalToppingsNum;
         totalPizzasText.text = "Pizzas: " + totalPizzasNum;
+        totalCostText.text = "Cost: $" + totalCostNum;
     }
 
     public void PickPizza(string pizzaName)
@@ -34,12 +37,15 @@ public class PizzaCrafter : MonoBehaviour
         {
             case "Cheese":
                 this.pizza = new CheesePizza();
+                totalPizzasNum++;
                 break;
             case "Sausage":
                 this.pizza = new SausagePizza();
+                totalPizzasNum++;
                 break;
             case "Pepperoni":
                 this.pizza = new PepperoniPizza();
+                totalPizzasNum++;
                 break;
         }
         DisplayPizza();
@@ -51,42 +57,34 @@ public class PizzaCrafter : MonoBehaviour
         {
             case "Bacon Topping":
                 this.pizza = new BaconTopping(pizza);
-                totalToppingsNum++;
                 break;
 
             case "Ham Topping":
                 this.pizza = new HamTopping(pizza);
-                totalToppingsNum++;
                 break;
 
             case "Pepperoni Topping":
                 this.pizza = new PepperoniTopping(pizza);
-                totalToppingsNum++;
                 break;
 
             case "Sausage Topping":
                 this.pizza = new SausageTopping(pizza);
-                totalToppingsNum++;
                 break;
 
             case "Onion Topping":
                 this.pizza = new OnionTopping(pizza);
-                totalToppingsNum++;
                 break;
 
             case "Bell Pepper Topping":
                 this.pizza = new BellPepperTopping(pizza);
-                totalToppingsNum++;
                 break;
 
             case "Mushroom Topping":
                 this.pizza = new MushroomTopping(pizza);
-                totalToppingsNum++;
                 break;
 
             case "Garlic Topping":
                 this.pizza = new GarlicTopping(pizza);
-                totalToppingsNum++;
                 break;
         }
         DisplayPizza();
@@ -94,7 +92,10 @@ public class PizzaCrafter : MonoBehaviour
 
     public void DisplayPizza()
     {
-        pizzaStats.text = pizza.GetDescription() + " Total cost: " + pizza.GetTotalCost() + " with " + pizza.GetTotalPizzaToppings() + " total toppings.";
+        pizzaStats.text = pizza.GetDescription() + " Total cost: $" + pizza.GetTotalCost() + " with " + pizza.GetTotalPizzaToppings() + " total toppings.";
+
+        totalCostNum = pizza.GetTotalCost();
+        totalToppingsNum = pizza.GetTotalPizzaToppings();
     }
 
 }

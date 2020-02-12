@@ -19,7 +19,7 @@ public class GarlicTopping : PizzaDecorator
 
     public override string GetDescription()
     {
-        return pizzaTopping.GetDescription() + ", add garlic";
+        return pizzaTopping.GetDescription();
     }
 
     public override float GetTotalCost()

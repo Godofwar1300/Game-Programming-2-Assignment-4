@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 892177d471736e24b948cf781fbdaab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  mainMenuMusic: {fileID: 0}
-  gameMenuMusic: {fileID: 0}
-  gameOverMusic: {fileID: 0}
+  audioSource: {fileID: 1866058408011607804}
+  mainMenuMusic: {fileID: 8300000, guid: 47dc52a89a2138144bbcbb5e2a8d2581, type: 3}
+  gameMenuMusic: {fileID: 8300000, guid: 47dc52a89a2138144bbcbb5e2a8d2581, type: 3}
+  gameOverMusic: {fileID: 8300000, guid: 47dc52a89a2138144bbcbb5e2a8d2581, type: 3}

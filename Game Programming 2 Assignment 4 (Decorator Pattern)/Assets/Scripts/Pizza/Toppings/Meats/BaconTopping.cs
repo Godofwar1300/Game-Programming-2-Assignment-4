@@ -19,7 +19,7 @@ public class BaconTopping : PizzaDecorator
 
     public override string GetDescription()
     {
-        return pizzaTopping.GetDescription() + ", with bacon";
+        return pizzaTopping.GetDescription();
     }
 
     public override float GetTotalCost()

@@ -19,7 +19,7 @@ public class HamTopping : PizzaDecorator
 
     public override string GetDescription()
     {
-        return pizzaTopping.GetDescription() + ", with ham";
+        return pizzaTopping.GetDescription();
     }
 
     public override float GetTotalCost()
