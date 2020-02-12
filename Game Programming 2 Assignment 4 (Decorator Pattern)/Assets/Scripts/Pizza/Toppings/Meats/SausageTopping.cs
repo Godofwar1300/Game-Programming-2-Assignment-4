@@ -13,6 +13,7 @@ public class SausageTopping : PizzaDecorator
 
     Pizza pizzaTopping;
 
+
     public SausageTopping(Pizza pizza)
     {
         this.pizzaTopping = pizza;
@@ -20,7 +21,7 @@ public class SausageTopping : PizzaDecorator
 
     public override string GetDescription()
     {
-        return pizzaTopping.GetDescription() + ", with sausage";
+        return pizzaTopping.GetDescription();//", with sausage";
     }
 
     public override float GetTotalCost()
