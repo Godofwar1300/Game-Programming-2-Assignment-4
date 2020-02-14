@@ -14,18 +14,18 @@ public class AudioManager : MonoBehaviour
 {
 
     public AudioSource audioSource;
+    public AudioSource pizzaTime;
 
     public AudioClip mainMenuMusic;
     public AudioClip gameMenuMusic;
     public AudioClip gameOverMusic;
+    public AudioClip pizzaTimeVoice;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        PlayMenuMusic();
-        PlayGameMusic();
-        PlayGameOverMusic();
+        
     }
 
     // Update is called once per frame
@@ -62,6 +62,12 @@ public class AudioManager : MonoBehaviour
             audioSource.loop = true;
             audioSource.Play();
         }
+    }
+
+    public void PlayVoice()
+    {
+        pizzaTime.clip = pizzaTimeVoice;
+        pizzaTime.Play();
     }
 
 }

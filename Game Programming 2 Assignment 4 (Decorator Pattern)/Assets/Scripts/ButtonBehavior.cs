@@ -11,6 +11,15 @@ using UnityEngine.SceneManagement;
 
 public class ButtonBehavior : MonoBehaviour
 {
+
+    AudioManager audioMan;
+
+
+    public void Start()
+    {
+        audioMan = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+    }
+
     public void StartGame()
     {
         SceneManager.LoadScene(1);

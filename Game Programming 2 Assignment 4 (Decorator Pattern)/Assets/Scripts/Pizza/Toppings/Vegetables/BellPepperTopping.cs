@@ -24,7 +24,7 @@ public class BellPepperTopping : PizzaDecorator
 
     public override float GetTotalCost()
     {
-        return pizzaTopping.GetTotalCost() + 0.20f;
+        return pizzaTopping.GetTotalCost() + 0.50f;
     }
 
     public override int GetTotalPizzaToppings()

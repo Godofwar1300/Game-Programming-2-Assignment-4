@@ -17,7 +17,7 @@ public class CheesePizza : Pizza
 
     public override float GetTotalCost()
     {
-        return 6.75f;
+        return 6.00f;
     }
 
     public override int GetTotalPizzaToppings()
