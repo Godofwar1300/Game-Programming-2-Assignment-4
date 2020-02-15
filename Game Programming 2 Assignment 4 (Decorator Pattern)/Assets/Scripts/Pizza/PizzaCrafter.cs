@@ -212,7 +212,7 @@ public class PizzaCrafter : MonoBehaviour
         if (totalCostNum == randomTotalCost)
         {
             gameIsOver = true;
-            resultsText.text = "Results\n\nWhatever I want to say here.";
+            resultsText.text = "Results:\n\nGood to see that the cost ad budget matched but you still ran out of time!";
             StopAllCoroutines();
             audioMan.audioSource.Stop();
         }
@@ -254,14 +254,14 @@ public class PizzaCrafter : MonoBehaviour
         if (totalCostNum == randomTotalCost)
         {
             gameIsOver = true;
-            resultsText.text = "Results:\n\nCongratulations you matched the price!";
+            resultsText.text = "Results:\n\nCongratulations you matched the price and budget!";
             StopAllCoroutines();
             audioMan.audioSource.Stop();
         }
         else if(totalCostNum < randomTotalCost)
         {
             gameIsOver = true;
-            resultsText.text = "Results:\n\nYou underspent!\nYour budget was $" + randomTotalCost + " and you spent $" + totalCostNum;
+            resultsText.text = "Results:\n\nYou underspent but at least you didn't go over!\nYour budget was $" + randomTotalCost + " and you spent $" + totalCostNum;
             StopAllCoroutines();
             audioMan.audioSource.Stop();
         }

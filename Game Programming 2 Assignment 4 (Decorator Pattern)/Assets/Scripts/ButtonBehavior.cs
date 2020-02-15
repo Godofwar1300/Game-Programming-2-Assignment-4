@@ -30,6 +30,16 @@ public class ButtonBehavior : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void Instructions()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+    public void Back()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void EndGame()
     {
         Application.Quit();
